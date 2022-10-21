@@ -3,7 +3,11 @@ MAINTAINER Fabian Beuke <mail@beuke.org>
 
 RUN apk add --update --no-cache \
     libgcc libstdc++ libx11 glib libxrender libxext libintl \
-    ttf-dejavu ttf-droid ttf-freefont ttf-liberation ttf-ubuntu-font-family
+    ttf-dejavu ttf-droid ttf-freefont ttf-liberation ttf-ubuntu-font-family \
+    font-jis-misc font-noto font-noto-cjk font-noto-thai font-jis-misc \
+    font-isas-misc font-noto-devanagari font-noto-arabic \
+    font-noto-malayalam font-noto-tamil font-noto-kannada font-noto-telugu \
+    font-noto-oriya font-noto-gujarati font-noto-bengali
 
 # On alpine static compiled patched qt headless wkhtmltopdf (46.8 MB).
 COPY --from=madnight/alpine-wkhtmltopdf-builder:0.12.5-alpine3.10-606718795 \
